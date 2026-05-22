@@ -1,0 +1,381 @@
+/* ROOT VARIABLES (LIGHT MODE LOOK) */
+:root {
+    --bg-color: #f8f9fa;            
+    --section-bg: #ffffff;          
+    --card-bg: #ffffff;             
+    --text-color: #212529;          
+    --text-muted: #6c757d;          
+    --nav-bg: rgba(255, 255, 255, 0.7) !important; 
+    --nav-text: #212529 !important; 
+    --toggle-bg: #ccc;
+    --card-shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* DARK MODE LOOK (Best for Movie Sites) */
+[data-theme="dark"] {
+    --bg-color: #121212;            
+    --section-bg: #1a1a1a;          
+    --card-bg: #22252a;             
+    --text-color: #f8f9fa;          
+    --text-muted: #a6b0ba;          
+    --nav-bg: rgba(26, 26, 26, 0.7) !important; 
+    --nav-text: #ffffff !important; 
+    --toggle-bg: #ffcc00; /* Toggle button color changed to gold */
+    --card-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Base Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 0 !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Glassmorphism */
+.navbar {
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+}
+
+.navbar .navbar-brand, .navbar .navbar-nav .nav-link {
+    color: var(--nav-text) !important;
+    transition: color 0.3s;
+}
+
+.navbar .navbar-nav .nav-link {
+    opacity: 0.85;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    opacity: 1;
+    color: #ffcc00 !important; /* Gold hover effect */
+}
+
+/* Mobile Toggler Icon Dynamic Color */
+.navbar-toggler {
+    border-color: var(--nav-text) !important;
+}
+
+.navbar-toggler-icon {
+    transition: filter 0.3s ease;
+}
+
+/* Dark mode එකේදී ටොගල් එක සුදු පැහැයට හැරවීම */
+[data-theme="dark"] .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Light mode එකේදී ටොගල් එක කළු පැහැයට හැරවීම */
+[data-theme="light"] .navbar-toggler-icon {
+    filter: invert(0);
+}
+
+/* ----------------------------------------- */
+/* Hero Section (CINEMA BACKGROUND) */
+/* ----------------------------------------- */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200') no-repeat center center/cover;
+    height: 90vh;
+}
+
+/* Dynamic Sections & Cards */
+.services-section {
+    background-color: var(--section-bg);
+    transition: background-color 0.3s ease;
+}
+
+.heading-line {
+    width: 60px;
+    height: 3px;
+    background-color: #ffcc00; /* Changed from blue to Gold */
+    margin-top: 10px;
+}
+
+.service-card {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    box-shadow: 0 4px 15px var(--card-shadow) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+    transition: color 0.3s ease;
+}
+
+/* Movie/Trailer Button Custom Styles */
+.btn-warning {
+    background-color: #ffcc00 !important;
+    border-color: #ffcc00 !important;
+    color: #000 !important;
+}
+
+.btn-warning:hover {
+    background-color: #e6b800 !important;
+    border-color: #e6b800 !important;
+}
+
+.btn-outline-warning {
+    color: #ffcc00 !important;
+    border-color: #ffcc00 !important;
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffcc00 !important;
+    color: #000 !important;
+}
+
+/* Contact Form Dynamic Styles */
+#contactForm {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px var(--card-shadow) !important;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm .form-control {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] #contactForm .form-control {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] #contactForm .form-control:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 0 0.25rem rgba(255, 204, 0, 0.25);
+}
+
+/* ----------------------------------------- */
+/* NEW PROFESSIONAL SUN & MOON TOGGLE BUTTON */
+/* ----------------------------------------- */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-btn {
+    background-color: #22252a;
+    border: 2px solid #ffcc00;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Light mode එකේදී බටන් එකේ පෙනුම වෙනස් වීම */
+[data-theme="light"] .theme-btn {
+    background-color: #ffffff;
+    border-color: #ff9800;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.theme-btn .fa-sun { color: #ff9800; font-size: 14px; }
+.theme-btn .fa-moon { color: #f1c40f; font-size: 14px; }
+
+/* බටන් එක ඇතුළේ දුවන රවුම (Ball) */
+.theme-btn .ball {
+    background-color: #ffcc00;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    height: 20px;
+    width: 20px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Light mode එකේදී බෝලයේ පාට */
+[data-theme="light"] .theme-btn .ball {
+    background-color: #ff9800;
+}
+
+/* Dark mode සක්‍රීය වූ විට බෝලය දකුණට ලිස්සා යාම */
+[data-theme="dark"] .theme-btn .ball {
+    transform: translateX(28px);
+}
+
+/* Hover කළ විට සියුම් Glow එකක් එකතු වීම */
+.theme-btn:hover {
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+/* Loader Styles */
+#loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+#loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ----------------------------------------- */
+/* Dropdown Menu Dynamic Theme Styling       */
+/* ----------------------------------------- */
+.navbar .dropdown-menu {
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px var(--card-shadow);
+    border-radius: 8px;
+    padding: 8px 0;
+}
+
+.navbar .dropdown-item {
+    color: var(--text-color) !important;
+    padding: 8px 20px;
+    font-size: 14px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover Effect for Dropdown Items */
+.navbar .dropdown-item:hover {
+    background-color: var(--bg-color) !important;
+    color: #ffcc00 !important;
+}
+
+/* Dropdown Divider Styling */
+.navbar .dropdown-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+[data-theme="light"] .navbar .dropdown-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   NEW: Premium Hamburger Button Styles
+========================================= */
+.premium-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.premium-hamburger span {
+    display: block;
+    width: 100%;
+    height: 3.5px; /* ඉරි වල ඝනකම */
+    background-color: #ffcc00; /* රන්වන් පැහැය */
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.premium-hamburger:hover span {
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.8); /* Glow Effect එක */
+    background-color: #ffd633;
+}
+
+/* =========================================
+   NEW: Premium Sidebar Menu Styles
+========================================= */
+.premium-sidebar {
+    background: rgba(10, 10, 10, 0.95) !important; /* Glassmorphism Dark Effect */
+    backdrop-filter: blur(10px);
+    width: 320px !important;
+    border-right: 1px solid rgba(255, 204, 0, 0.1);
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-close-btn {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.custom-close-btn:hover {
+    opacity: 1;
+    transform: rotate(90deg); /* Close button Animation */
+}
+
+.premium-link {
+    color: #a0a0a0 !important;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 18px !important;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    background: transparent;
+}
+
+.premium-link i {
+    width: 30px;
+    font-size: 18px;
+    color: #555;
+    transition: 0.4s ease;
+}
+
+/* Hover Effect for Links */
+.premium-link:hover {
+    background: linear-gradient(90deg, rgba(255, 204, 0, 0.1) 0%, transparent 100%);
+    color: #ffffff !important;
+    transform: translateX(8px); /* දකුණට ලිස්සා යාම */
+}
+
+.premium-link:hover i {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Active Page Style */
+.premium-link.active {
+    background: rgba(255, 204, 0, 0.15);
+    color: #ffcc00 !important;
+    border-left: 4px solid #ffcc00;
+}
+
+.premium-link.active i {
+    color: #ffcc00;
+}
+
+/* Footer Section */
+.sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
