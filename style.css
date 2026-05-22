@@ -2,7 +2,7 @@
 :root {
     --bg-color: #f8f9fa;            
     --section-bg: #ffffff;          
-    --card-bg: #ffffff;             
+    --card-bg: #ffffff;              
     --text-color: #212529;          
     --text-muted: #6c757d;          
     --nav-bg: rgba(255, 255, 255, 0.7) !important; 
@@ -15,7 +15,7 @@
 [data-theme="dark"] {
     --bg-color: #121212;            
     --section-bg: #1a1a1a;          
-    --card-bg: #22252a;             
+    --card-bg: #22252a;              
     --text-color: #f8f9fa;          
     --text-muted: #a6b0ba;          
     --nav-bg: rgba(26, 26, 26, 0.7) !important; 
@@ -44,7 +44,7 @@ html {
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: background-color 0.3s, backdrop-filter 0.3s;
+    transition: background-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .navbar .navbar-brand, .navbar .navbar-nav .nav-link {
@@ -378,4 +378,26 @@ html {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
+}
+
+/* =========================================
+   ADDITION: Navbar Scroll Blur Effect (Transparent Glass)
+========================================= */
+
+/* පල්ලෙහාට Scroll කරද්දී Background එක නැති වෙලා තදින් Blur වීම (Dark Mode) */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.1) !important; /* කළු වර්ණය 90% ක්ම අයින් කිරීම */
+    backdrop-filter: blur(25px) saturate(200%) !important; /* බොඳ වීම (Blur) ගොඩක් වැඩි කිරීම */
+    -webkit-backdrop-filter: blur(25px) saturate(200%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Light mode එකේදී Scroll කරද්දී Blur වීම */
+[data-theme="light"] .navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* සුදු වර්ණය 90% ක්ම අයින් කිරීම */
+    backdrop-filter: blur(25px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(200%) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }

@@ -10,13 +10,7 @@
 </head>
 <body>
 
-    <div id="loader">
-        <div class="spinner-border text-warning" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-    </div>
-
-    <nav class="navbar sticky-top" style="background-color: #0a0a0a; border-bottom: 1px solid #222;">
+    <nav id="mainNavbar" class="navbar sticky-top">
         <div class="container d-flex align-items-center">
             
             <button class="premium-hamburger border-0 bg-transparent me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#premiumSidebar" aria-controls="premiumSidebar">
@@ -45,7 +39,10 @@
             <h1 class="display-3 fw-bold mb-3" style="color: #ffcc00; text-shadow: 2px 2px 12px rgba(0,0,0,0.9);">Welcome to TrailersBliss LK</h1>
             <p class="lead mb-4" style="text-shadow: 1px 1px 6px rgba(0,0,0,0.9);">Your Gateway to the Cinematic Universe. Watch the Latest Movie Trailers Online.</p>
             <a href="#trailers" class="btn btn-warning btn-lg me-3 fw-bold text-dark">Watch Trailers</a>
-            <a href="https://chat.whatsapp.com/your-link-here" target="_blank" class="btn btn-outline-light btn-lg fw-bold"><i class="fab fa-whatsapp me-2"></i>Join Community</a>
+            
+            <a href="https://whatsapp.com/channel/0029Vb7RSiPC1Fu40vuNrs1h" target="_blank" class="btn btn-outline-warning btn-lg fw-bold">
+                <i class="fab fa-whatsapp me-2"></i>Join Community
+            </a>
         </div>
     </section>
 
@@ -95,34 +92,7 @@
         </div>
     </section>
 
-    <section id="contact" class="py-5 services-section">
-        <div class="container">
-            <h2 class="text-center fw-bold">Contact Us</h2>
-            <div class="heading-line mx-auto mb-5"></div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <form id="contactForm" class="p-4 rounded">
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Name</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Email</label>
-                            <input type="email" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Message</label>
-                            <textarea class="form-control" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-warning w-100 fw-bold text-dark">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <div class="offcanvas offcanvas-start premium-sidebar" tabindex="-1" id="premiumSidebar" aria-labelledby="premiumSidebarLabel">
-        
         <div class="offcanvas-header pt-4 pb-3 px-4">
             <h5 class="offcanvas-title fw-bold d-flex align-items-center" id="premiumSidebarLabel" style="color: #ffcc00; letter-spacing: 1px;">
                 <i class="fas fa-film me-2 fs-4"></i> TRAILERSBLISS
@@ -145,15 +115,36 @@
                     <a class="nav-link premium-link" href="#" data-bs-dismiss="offcanvas"><i class="fas fa-tv"></i> <span>TV Shows</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link premium-link" href="#contact" data-bs-dismiss="offcanvas"><i class="fas fa-envelope"></i> <span>Contact Us</span></a>
+                    <a class="nav-link premium-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal" data-bs-dismiss="offcanvas"><i class="fas fa-envelope"></i> <span>Contact Us</span></a>
                 </li>
             </ul>
-            
-            <div class="sidebar-footer mt-auto pt-4 border-top border-dark text-center">
-                <p class="text-secondary small mb-1">Gateway to Cinematic Universe</p>
-                <a href="http://www.TrailersBlissLK.netlify.app" target="_blank" class="text-decoration-none fw-bold" style="color: #ffcc00; font-size: 14px; letter-spacing: 0.5px;">
-                    www.TrailersBlissLK.netlify.app
-                </a>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #1a1a1a; color: #fff; border: 1px solid #333;">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold" id="contactModalLabel" style="color: #ffcc00;"><i class="fas fa-envelope me-2"></i> Contact Us</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-4">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Name</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Message</label>
+                            <textarea class="form-control bg-dark text-white border-secondary" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold text-dark">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
