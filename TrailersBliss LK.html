@@ -48,44 +48,54 @@
 
     <section id="trailers" class="py-5 services-section">
         <div class="container">
-            <h2 class="text-center fw-bold">Latest Trailers</h2>
-            <div class="heading-line mx-auto mb-5"></div>
-            <div class="row g-4">
+            <h2 class="text-start fw-bold mb-4 px-2 section-main-title">
+                <i class="fas fa-bolt" style="color: #ffcc00;"></i> LATEST TRAILERS
+            </h2>
+            
+            <div class="row g-3" id="dynamic-trailers">
                 
-                <div class="col-md-4">
-                    <div class="card service-card h-100 border-0 p-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600" class="card-img-top" alt="Movie Poster" style="height: 250px; object-fit: cover;">
-                        <div class="p-4 text-center">
-                            <span class="badge bg-warning text-dark mb-2">2026</span>
-                            <h4 class="fw-bold">Sci-Fi Adventure</h4>
-                            <p class="text-muted">Explore the deepest corners of the universe in this new epic thriller.</p>
-                            <a href="#" class="btn btn-sm btn-outline-warning mt-2 fw-bold">Play Trailer</a>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="https://www.youtube.com" class="movie-card" target="_blank">
+                        <div class="year-badge">2026</div>
+                        <div class="sub-badge">SINHALA SUB</div>
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600" alt="Movie Poster">
+                        <div class="movie-info">
+                            <h5 class="movie-title">The Super Mario Galaxy</h5>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="card service-card h-100 border-0 p-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=600" class="card-img-top" alt="Movie Poster" style="height: 250px; object-fit: cover;">
-                        <div class="p-4 text-center">
-                            <span class="badge bg-warning text-dark mb-2">2026</span>
-                            <h4 class="fw-bold">Action Protocol</h4>
-                            <p class="text-muted">Get ready for the ultimate high-octane action experience of the year.</p>
-                            <a href="#" class="btn btn-sm btn-outline-warning mt-2 fw-bold">Play Trailer</a>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="https://www.youtube.com" class="movie-card" target="_blank">
+                        <div class="year-badge">2026</div>
+                        <div class="sub-badge">SINHALA SUB</div>
+                        <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=600" alt="Movie Poster">
+                        <div class="movie-info">
+                            <h5 class="movie-title">Ready or Not</h5>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="card service-card h-100 border-0 p-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600" class="card-img-top" alt="Movie Poster" style="height: 250px; object-fit: cover;">
-                        <div class="p-4 text-center">
-                            <span class="badge bg-warning text-dark mb-2">2025</span>
-                            <h4 class="fw-bold">Animated Magic</h4>
-                            <p class="text-muted">An emotional and heartwarming journey filled with magic and laughter.</p>
-                            <a href="#" class="btn btn-sm btn-outline-warning mt-2 fw-bold">Play Trailer</a>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="https://www.youtube.com" class="movie-card" target="_blank">
+                        <div class="year-badge">2025</div>
+                        <div class="sub-badge">SINHALA SUB</div>
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600" alt="Movie Poster">
+                        <div class="movie-info">
+                            <h5 class="movie-title">The Boss Baby</h5>
                         </div>
-                    </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="https://www.youtube.com" class="movie-card" target="_blank">
+                        <div class="year-badge">2026</div>
+                        <div class="sub-badge">SINHALA SUB</div>
+                        <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=600" alt="Movie Poster">
+                        <div class="movie-info">
+                            <h5 class="movie-title">Safe Protocol</h5>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -117,11 +127,17 @@
                 <li class="nav-item">
                     <a class="nav-link premium-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal" data-bs-dismiss="offcanvas"><i class="fas fa-envelope"></i> <span>Contact Us</span></a>
                 </li>
+                
+                <li class="nav-item mt-4 border-top border-secondary pt-3">
+                    <a class="nav-link premium-link text-warning" href="#" data-bs-toggle="modal" data-bs-target="#adminLoginModal" data-bs-dismiss="offcanvas">
+                        <i class="fas fa-lock"></i> <span>Admin Login</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="background-color: #1a1a1a; color: #fff; border: 1px solid #333;">
                 <div class="modal-header border-bottom-0">
@@ -149,7 +165,61 @@
         </div>
     </div>
 
+    <div class="modal fade" id="adminLoginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #1a1a1a; color: #fff; border: 1px solid #333;">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold text-warning"><i class="fas fa-user-shield me-2"></i> Admin Panel</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pb-4">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Password</label>
+                        <input type="password" id="adminPassword" class="form-control bg-dark text-white border-secondary" placeholder="Enter password">
+                    </div>
+                    <button id="loginBtn" class="btn btn-warning w-100 fw-bold text-dark">Login</button>
+                    <p id="loginError" class="text-danger mt-2 d-none">Incorrect Password!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="adminDashboardModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="background-color: #1a1a1a; color: #fff; border: 1px solid #ffcc00;">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold text-warning"><i class="fas fa-plus-circle me-2"></i> Add New Trailer</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pb-4">
+                    <form id="addTrailerForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Movie Title</label>
+                                <input type="text" id="movieTitle" class="form-control bg-dark text-white border-secondary" required placeholder="Ex: Avatar 3">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Release Year</label>
+                                <input type="number" id="movieYear" class="form-control bg-dark text-white border-secondary" required placeholder="Ex: 2026">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-bold">Image URL (Poster)</label>
+                                <input type="url" id="movieImage" class="form-control bg-dark text-white border-secondary" required placeholder="https://example.com/image.jpg">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label fw-bold">YouTube Trailer Link</label>
+                                <input type="url" id="movieTrailer" class="form-control bg-dark text-white border-secondary" required placeholder="https://youtube.com/...">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 fw-bold"><i class="fas fa-upload me-2"></i> Publish Trailer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    
+    <script type="module" src="script.js"></script>
 </body>
 </html>

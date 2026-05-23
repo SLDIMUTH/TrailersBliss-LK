@@ -20,7 +20,7 @@
     --text-muted: #a6b0ba;          
     --nav-bg: rgba(26, 26, 26, 0.7) !important; 
     --nav-text: #ffffff !important; 
-    --toggle-bg: #ffcc00; /* Toggle button color changed to gold */
+    --toggle-bg: #ffcc00; 
     --card-shadow: rgba(0, 0, 0, 0.4);
 }
 
@@ -58,65 +58,25 @@ html {
 
 .navbar .navbar-nav .nav-link:hover {
     opacity: 1;
-    color: #ffcc00 !important; /* Gold hover effect */
+    color: #ffcc00 !important; 
 }
 
-/* Mobile Toggler Icon Dynamic Color */
-.navbar-toggler {
-    border-color: var(--nav-text) !important;
-}
-
-.navbar-toggler-icon {
-    transition: filter 0.3s ease;
-}
-
-/* Dark mode එකේදී ටොගල් එක සුදු පැහැයට හැරවීම */
-[data-theme="dark"] .navbar-toggler-icon {
-    filter: invert(1);
-}
-
-/* Light mode එකේදී ටොගල් එක කළු පැහැයට හැරවීම */
-[data-theme="light"] .navbar-toggler-icon {
-    filter: invert(0);
-}
-
-/* ----------------------------------------- */
-/* Hero Section (CINEMA BACKGROUND) */
-/* ----------------------------------------- */
+/* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
                 url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200') no-repeat center center/cover;
     height: 90vh;
 }
 
-/* Dynamic Sections & Cards */
+/* Dynamic Sections */
 .services-section {
     background-color: var(--section-bg);
     transition: background-color 0.3s ease;
 }
 
-.heading-line {
-    width: 60px;
-    height: 3px;
-    background-color: #ffcc00; /* Changed from blue to Gold */
-    margin-top: 10px;
-}
-
-.service-card {
-    background-color: var(--card-bg) !important;
+.section-main-title {
     color: var(--text-color) !important;
-    box-shadow: 0 4px 15px var(--card-shadow) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
-}
-
-.text-muted {
-    color: var(--text-muted) !important;
-    transition: color 0.3s ease;
+    border-left: 5px solid #ffcc00;
 }
 
 /* Movie/Trailer Button Custom Styles */
@@ -160,14 +120,7 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-[data-theme="dark"] #contactForm .form-control:focus {
-    border-color: #ffcc00;
-    box-shadow: 0 0 0 0.25rem rgba(255, 204, 0, 0.25);
-}
-
-/* ----------------------------------------- */
-/* NEW PROFESSIONAL SUN & MOON TOGGLE BUTTON */
-/* ----------------------------------------- */
+/* Theme Toggle Button */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -185,21 +138,17 @@ html {
     height: 30px;
     width: 60px;
     border-radius: 50px;
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
     transition: all 0.3s ease;
 }
 
-/* Light mode එකේදී බටන් එකේ පෙනුම වෙනස් වීම */
 [data-theme="light"] .theme-btn {
     background-color: #ffffff;
     border-color: #ff9800;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .theme-btn .fa-sun { color: #ff9800; font-size: 14px; }
 .theme-btn .fa-moon { color: #f1c40f; font-size: 14px; }
 
-/* බටන් එක ඇතුළේ දුවන රවුම (Ball) */
 .theme-btn .ball {
     background-color: #ffcc00;
     border-radius: 50%;
@@ -208,78 +157,18 @@ html {
     left: 4px;
     height: 20px;
     width: 20px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light mode එකේදී බෝලයේ පාට */
 [data-theme="light"] .theme-btn .ball {
     background-color: #ff9800;
 }
 
-/* Dark mode සක්‍රීය වූ විට බෝලය දකුණට ලිස්සා යාම */
 [data-theme="dark"] .theme-btn .ball {
     transform: translateX(28px);
 }
 
-/* Hover කළ විට සියුම් Glow එකක් එකතු වීම */
-.theme-btn:hover {
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
-}
-
-/* Loader Styles */
-#loader {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background-color: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease, visibility 0.5s;
-}
-
-#loader.fade-out {
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* ----------------------------------------- */
-/* Dropdown Menu Dynamic Theme Styling       */
-/* ----------------------------------------- */
-.navbar .dropdown-menu {
-    background-color: var(--card-bg) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 24px var(--card-shadow);
-    border-radius: 8px;
-    padding: 8px 0;
-}
-
-.navbar .dropdown-item {
-    color: var(--text-color) !important;
-    padding: 8px 20px;
-    font-size: 14px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* Hover Effect for Dropdown Items */
-.navbar .dropdown-item:hover {
-    background-color: var(--bg-color) !important;
-    color: #ffcc00 !important;
-}
-
-/* Dropdown Divider Styling */
-.navbar .dropdown-divider {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-[data-theme="light"] .navbar .dropdown-divider {
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-/* =========================================
-   NEW: Premium Hamburger Button Styles
-========================================= */
+/* Premium Hamburger Menu Button */
 .premium-hamburger {
     display: flex;
     flex-direction: column;
@@ -288,35 +177,24 @@ html {
     height: 20px;
     cursor: pointer;
     padding: 0;
-    transition: all 0.3s ease;
+    z-index: 1050;
 }
 
 .premium-hamburger span {
     display: block;
     width: 100%;
-    height: 3.5px; /* ඉරි වල ඝනකම */
-    background-color: #ffcc00; /* රන්වන් පැහැය */
+    height: 3.5px;
+    background-color: #ffcc00;
     border-radius: 4px;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
-.premium-hamburger:hover span {
-    box-shadow: 0 0 12px rgba(255, 204, 0, 0.8); /* Glow Effect එක */
-    background-color: #ffd633;
-}
-
-/* =========================================
-   NEW: Premium Sidebar Menu Styles
-========================================= */
+/* Premium Sidebar Menu */
 .premium-sidebar {
-    background: rgba(10, 10, 10, 0.95) !important; /* Glassmorphism Dark Effect */
+    background: rgba(10, 10, 10, 0.95) !important;
     backdrop-filter: blur(10px);
     width: 320px !important;
     border-right: 1px solid rgba(255, 204, 0, 0.1);
-}
-
-.offcanvas-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .custom-close-btn {
@@ -327,7 +205,7 @@ html {
 
 .custom-close-btn:hover {
     opacity: 1;
-    transform: rotate(90deg); /* Close button Animation */
+    transform: rotate(90deg);
 }
 
 .premium-link {
@@ -340,64 +218,138 @@ html {
     align-items: center;
     transition: all 0.4s ease;
     text-decoration: none;
-    background: transparent;
 }
 
 .premium-link i {
     width: 30px;
     font-size: 18px;
     color: #555;
-    transition: 0.4s ease;
 }
 
-/* Hover Effect for Links */
 .premium-link:hover {
     background: linear-gradient(90deg, rgba(255, 204, 0, 0.1) 0%, transparent 100%);
     color: #ffffff !important;
-    transform: translateX(8px); /* දකුණට ලිස්සා යාම */
+    transform: translateX(8px);
 }
 
-.premium-link:hover i {
-    color: #ffcc00;
-    transform: scale(1.1);
-}
-
-/* Active Page Style */
 .premium-link.active {
     background: rgba(255, 204, 0, 0.15);
     color: #ffcc00 !important;
     border-left: 4px solid #ffcc00;
 }
 
-.premium-link.active i {
-    color: #ffcc00;
-}
-
-/* Footer Section */
-.sidebar-footer {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
+/* Navbar Scroll Effect */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(25px) saturate(200%) !important;
 }
 
 /* =========================================
-   ADDITION: Navbar Scroll Blur Effect (Transparent Glass)
+    MOVIE CARD STYLES
 ========================================= */
-
-/* පල්ලෙහාට Scroll කරද්දී Background එක නැති වෙලා තදින් Blur වීම (Dark Mode) */
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.1) !important; /* කළු වර්ණය 90% ක්ම අයින් කිරීම */
-    backdrop-filter: blur(25px) saturate(200%) !important; /* බොඳ වීම (Blur) ගොඩක් වැඩි කිරීම */
-    -webkit-backdrop-filter: blur(25px) saturate(200%) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.movie-card {
+    position: relative;
+    display: block;
+    height: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    background-color: #111;
+    z-index: 1;
 }
 
-/* Light mode එකේදී Scroll කරද්දී Blur වීම */
-[data-theme="light"] .navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.1) !important; /* සුදු වර්ණය 90% ක්ම අයින් කිරීම */
-    backdrop-filter: blur(25px) saturate(200%) !important;
-    -webkit-backdrop-filter: blur(25px) saturate(200%) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(255, 204, 0, 0.3);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.year-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: 900;
+    padding: 5px 15px;
+    border-bottom-left-radius: 8px;
+    font-size: 13px;
+    z-index: 2;
+}
+
+.sub-badge {
+    position: absolute;
+    top: 80px;
+    left: -38px;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: 900;
+    padding: 4px 15px;
+    font-size: 11px;
+    transform: rotate(-90deg);
+    z-index: 2;
+    letter-spacing: 1px;
+}
+
+.movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 60px 10px 15px 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 100%);
+    text-align: center;
+    z-index: 2;
+}
+
+.movie-title {
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* =========================================
+    ADMIN SYSTEM STYLES (NEWLY ADDED)
+========================================= */
+#adminLoginModal .modal-content,
+#adminDashboardModal .modal-content {
+    box-shadow: 0 10px 30px rgba(255, 204, 0, 0.15);
+    border-radius: 12px;
+}
+
+/* Admin Modals වල තියෙන Inputs Focus කරාම කහ පාටින් Glow වෙන්න */
+#adminLoginModal .form-control:focus,
+#adminDashboardModal .form-control:focus {
+    border-color: #ffcc00 !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 204, 0, 0.25) !important;
+    background-color: #1f1f1f !important;
+}
+
+/* Password වැරදුනොත් වැටෙන Error text එක ගැස්සෙන ඇනිමේෂන් එකක් */
+#loginError {
+    font-size: 14px;
+    font-weight: 600;
+    animation: shakeError 0.3s ease-in-out;
+}
+
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+/* Admin Dashboard එක ඇතුලේ තියෙන Labels */
+#addTrailerForm .form-label {
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    color: #e0e0e0;
 }
